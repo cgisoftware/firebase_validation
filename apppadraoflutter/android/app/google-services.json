@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "790715051695",
+    "firebase_url": "https://apppadraoflutter.firebaseio.com",
+    "project_id": "apppadraoflutter",
+    "storage_bucket": "apppadraoflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790715051695:android:ef835f0eb618dcb5",
+        "android_client_info": {
+          "package_name": "br.com.cgi.apppadraoflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790715051695-dgf60r0nk4s9r071rpl4aelh6i5iifju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5ie44WQgvnOQcAe6CoF5GWvnZq7_zqcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790715051695-dgf60r0nk4s9r071rpl4aelh6i5iifju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
