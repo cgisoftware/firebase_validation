@@ -28,7 +28,7 @@ class Seguranca {
         "usuario": await this.getUsuario(),
         "senha": await this.getSenha(),
         "pacific": await this.getURL(),
-        "versao": int.parse(await this.getVersaoMinima()),
+        "versao": await this.getVersaoProgramaPacific(),
         "cliente": await this.getCodigo(),
         "aplicativo": aplicativo
       });
@@ -269,6 +269,11 @@ class Seguranca {
   Future getVersaoMinima() async {
     var token = await readPreferences('versao_minima');
     return token;
+  }
+
+  Future<int> getVersaoProgramaPacific() async {
+    var token = await readPreferences('versaoProgramaPacific');
+    return int.parse(token);
   }
 
   Future<Null> savePreferences(String key, String value) async {

@@ -20,6 +20,7 @@ class ConfigPage extends StatefulWidget {
   final Color appBarTextColor;
   final bool gateway;
   final String aplicativo;
+  final int versaoProgramaPacific;
   ConfigPage(
       {this.motorista = false,
       this.placa = false,
@@ -28,7 +29,8 @@ class ConfigPage extends StatefulWidget {
       this.appBarColor = Colors.transparent,
       this.appBarTextColor = Colors.white,
       this.gateway = false,
-      this.aplicativo = ""});
+      this.aplicativo = "",
+      @required this.versaoProgramaPacific});
   @override
   _ConfigPageState createState() => _ConfigPageState();
 }
@@ -175,9 +177,7 @@ class _ConfigPageState extends State<ConfigPage> {
                                           labelText: "CPF",
                                           filled: this.widget.filled),
                                       keyboardType: TextInputType.number,
-                                      inputFormatters: [
-                                        maskFormatter
-                                      ],
+                                      inputFormatters: [maskFormatter],
                                     ))
                                 : Padding(
                                     padding: EdgeInsets.symmetric(vertical: 5),
@@ -375,6 +375,7 @@ class _ConfigPageState extends State<ConfigPage> {
       await _savePreferences("edtServico", this._edtServicoText.text);
       await _savePreferences("edtMotorista", this._edtMotoristaText.text);
       await _savePreferences("edtPlaca", this._edtPlacaText.text);
+       await _savePreferences("versaoProgramaPacific", this.widget.versaoProgramaPacific.toString());
       var r = await s.execute();
       print(r);
       if (r != "") {
@@ -392,7 +393,7 @@ class _ConfigPageState extends State<ConfigPage> {
               "usuario": this._edtUsuarioText.text,
               "senha": this._edtSenhaText.text,
               "pacific": this._edtServicoText.text,
-              "versao": int.parse(await _redPreferences("versao_minima")),
+              "versao": this.widget.versaoProgramaPacific,
               "cliente": this._edtCodigoText.text,
               "aplicativo": widget.aplicativo
             });

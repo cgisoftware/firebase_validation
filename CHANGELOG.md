@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.8] - 30/12/2020
+
+### Chanded
+
+ - Alterado para buscar versão do pacific de acordo com parâmetro do aplicativo
+
 ## [1.0.7] - 21/10/2020
 
 ### Chanded
